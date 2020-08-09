@@ -31,7 +31,6 @@ public class HomeController {
         List<Product> listProduct = pro.list();
         model.addObject("listPro", listProduct);
         model.setViewName("home");
-        model.addObject("display","no");
         return model;
     }
     
@@ -40,7 +39,6 @@ public class HomeController {
     public ModelAndView newProduct(ModelAndView model) {
         Product newPro = new Product();
         model.addObject("product", newPro);
-        model.addObject("display","");
         model.setViewName("ProForm");
         return model;
     }
@@ -53,7 +51,6 @@ public class HomeController {
          ModelAndView model=new ModelAndView("home");
          List<Product> listProduct = pro.list();
          model.addObject("listPro", listProduct);
-        model.addObject("display","Updated Successfully!!!");
         return new ModelAndView("redirect:/");
         }
         else {
@@ -79,7 +76,6 @@ public class HomeController {
         	ModelAndView mod=new ModelAndView("home");
         	  List<Product> listProduct = pro.list();
               mod.addObject("listPro", listProduct);
-        	mod.addObject("display","Saved Successfully!!!");
         	return mod;
         }
         
