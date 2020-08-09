@@ -133,11 +133,6 @@
             </table>
             
         </div>
-      
-         <script>
-           if("${display}".localeCompare("no"))
-              window.alert("${display}");
-              
-        </script>
+
     </body>
 </html>
