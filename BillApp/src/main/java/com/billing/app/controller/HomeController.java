@@ -85,6 +85,7 @@ public class HomeController {
     public ModelAndView deleteProduct(HttpServletRequest request) {
         String pcode = request.getParameter("pcode");
         pro.delete(pcode);
+	 bill.removeProduct(pcode);
         return new ModelAndView("redirect:/");
     }
     @RequestMapping(value = "/editProduct", method = RequestMethod.GET)
